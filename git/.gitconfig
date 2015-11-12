@@ -1,0 +1,9 @@
+[push]
+	default = matching
+[user]
+	name = Joe Doliner
+	email = jdoliner@gmail.com
+[core]
+	editor = /usr/bin/vim
+[merge]
+	conflictstyle = diff3
