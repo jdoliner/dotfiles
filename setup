@@ -2,3 +2,4 @@
 ln -s vim/.vimrc ~/.vimrc
 ln -s zsh/.zshrc ~/.zshrc
 ln -s git/.gitconfig ~/.gitconfig
+ln -s tmux/.tmux.conf ~/.tmux.conf
