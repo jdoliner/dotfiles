@@ -1,5 +1,6 @@
 #!/bin/sh
-ln -s vim/.vimrc ~/.vimrc
-ln -s zsh/.zshrc ~/.zshrc
-ln -s git/.gitconfig ~/.gitconfig
-ln -s tmux/.tmux.conf ~/.tmux.conf
+ln vim/.vimrc ~/.vimrc
+ln zsh/.zshrc ~/.zshrc
+ln git/.gitconfig ~/.gitconfig
+ln tmux/.tmux.conf ~/.tmux.conf
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
