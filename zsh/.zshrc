@@ -5,7 +5,7 @@ export ZSH=/Users/jdoliner/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="ys"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -120,7 +120,13 @@ function create_docker_machine () {
         --google-project jd-dev2 \
         --engine-storage-driver devicemapper \
         dev
-    eval "$(docker-machine env dev)"
+}
+
+function create_local_docker_machine () {
+    docker-machine create \
+        --driver virtualbox \
+        --engine-storage-driver devicemapper \
+        local-dev
 }
 
 function create_gke_cluster () {
