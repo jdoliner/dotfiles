@@ -1,5 +1,5 @@
 [push]
-	default = matching
+	default = simple
 [user]
 	name = Joe Doliner
 	email = jdoliner@gmail.com
