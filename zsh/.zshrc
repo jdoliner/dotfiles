@@ -107,11 +107,11 @@ unsetopt EQUALS
 function create_docker_machine () {
     docker-machine create \
         --driver google \
-        --google-disk-size 100 \
+        --google-disk-size 200 \
         --google-disk-type pd-ssd \
         --google-machine-type n1-standard-16 \
         --google-zone us-central1-c \
-        --google-project jd-dev2 \
+        --google-project jd-dev-1218 \
         dev
 }
 
