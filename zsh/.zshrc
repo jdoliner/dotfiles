@@ -118,14 +118,12 @@ function create_docker_machine () {
         --google-machine-type n1-standard-16 \
         --google-zone us-central1-c \
         --google-project jd-dev2 \
-        --engine-storage-driver devicemapper \
         dev
 }
 
 function create_local_docker_machine () {
     docker-machine create \
         --driver virtualbox \
-        --engine-storage-driver devicemapper \
         local-dev
 }
 
@@ -142,4 +140,4 @@ function docker_cleanup () {
     docker rmi $(docker images -a -q -f dangling=true)
 }
 
-export GO15VENDOREXPERIMENT=1
+alias vim=nvim
