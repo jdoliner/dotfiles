@@ -103,12 +103,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 unsetopt EQUALS
 
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/jdoliner/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-source '/Users/jdoliner/google-cloud-sdk/completion.zsh.inc'
-
 
 function create_docker_machine () {
     docker-machine create \
@@ -141,3 +135,9 @@ function docker_cleanup () {
 }
 
 alias vim=nvim
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/jdoliner/Downloads/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/jdoliner/Downloads/google-cloud-sdk/completion.zsh.inc'
