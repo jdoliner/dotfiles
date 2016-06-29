@@ -136,6 +136,7 @@ function docker_cleanup () {
 
 alias vim=nvim
 alias timeout=gtimeout
+alias sha256sum=gsha256sum
 
 # The next line updates PATH for the Google Cloud SDK.
 source '/Users/jdoliner/Downloads/google-cloud-sdk/path.zsh.inc'

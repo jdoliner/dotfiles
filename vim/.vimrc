@@ -17,6 +17,7 @@ Bundle 'johnsyweb/vim-makeshift.git'
 Bundle 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
+Bundle 'rking/ag.vim'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -138,3 +139,6 @@ filetype plugin indent on
 syntax on
 
 au FileType go nmap <leader>t <Plug>(go-test)
+
+set number
+set relativenumber
