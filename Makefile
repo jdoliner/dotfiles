@@ -6,6 +6,6 @@ all:
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 nvim:
-	mkdir -p ~/.config}
+	mkdir -p ~/.config
 	ln -s ~/.vim ~/.config/nvim
 	ln -s ~/.vimrc ~/.config/nvim/init.vim
