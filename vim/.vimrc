@@ -142,3 +142,4 @@ au FileType go nmap <leader>t <Plug>(go-test)
 
 set number
 set relativenumber
+let g:syntastic_go_checkers = ['go']
