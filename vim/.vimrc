@@ -18,6 +18,10 @@ Bundle 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'rking/ag.vim'
+Plugin 'reedes/vim-pencil'
+Plugin 'vimoutliner/vimoutliner'
+Plugin 'elmcast/elm-vim'
+" Plugin 'davidhalter/jedi-vim'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -143,3 +147,5 @@ au FileType go nmap <leader>t <Plug>(go-test)
 set number
 set relativenumber
 let g:syntastic_go_checkers = ['go']
+
+nnoremap <silent> <special> <C-\>s     :SyntasticSetLoclist<CR>
