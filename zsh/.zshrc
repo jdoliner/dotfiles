@@ -67,7 +67,6 @@ plugins=(sudo)
 plugins=(tmux)
 plugins=(tmuxinator)
 plugins=(torrent)
-plugins=(osx)
 
 # User configuration
 
@@ -104,42 +103,36 @@ source $ZSH/oh-my-zsh.sh
 unsetopt EQUALS
 
 
-function create_docker_machine () {
-    docker-machine create \
-        --driver google \
-        --google-disk-size 200 \
-        --google-disk-type pd-ssd \
-        --google-machine-type n1-standard-16 \
-        --google-zone us-central1-c \
-        --google-project jd-dev-1218 \
-        dev
-}
-
-function create_local_docker_machine () {
-    docker-machine create \
-        --driver virtualbox \
-        local-dev
-}
-
-function create_gke_cluster () {
-    gcloud container clusters create \
-        --machine-type n1-standard-16 \
-        --num-nodes 1 \
-        cluster
-    gcloud container clusters get-credentials cluster
-}
-
 function docker_cleanup () {
     docker rm -v $(docker ps -a -q)
     docker rmi $(docker images -a -q -f dangling=true)
 }
 
-alias vim=nvim
 alias timeout=gtimeout
 alias sha256sum=gsha256sum
 
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:/home/jdoliner/.local/bin
+
+export ENT_ACT_CODE=$(cat ~/.creds/dash_key)
+
 # The next line updates PATH for the Google Cloud SDK.
-source '/Users/jdoliner/Downloads/google-cloud-sdk/path.zsh.inc'
+# source '/Users/jdoliner/Downloads/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
-source '/Users/jdoliner/Downloads/google-cloud-sdk/completion.zsh.inc'
+# source '/Users/jdoliner/Downloads/google-cloud-sdk/completion.zsh.inc'
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/jdoliner/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/jdoliner/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jdoliner/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/jdoliner/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

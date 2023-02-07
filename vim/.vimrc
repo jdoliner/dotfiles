@@ -21,10 +21,14 @@ Bundle 'rking/ag.vim'
 Plugin 'reedes/vim-pencil'
 Plugin 'vimoutliner/vimoutliner'
 Plugin 'elmcast/elm-vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'habamax/vim-godot'
 " Plugin 'davidhalter/jedi-vim'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'morhetz/gruvbox'
 " non github repos
 Bundle 'fatih/vim-go'
 " ...
@@ -32,7 +36,8 @@ Bundle 'fatih/vim-go'
 call vundle#end()            " required
 filetype plugin indent on    " required!
 
-colors delek
+set background=dark
+colors gruvbox
 let mapleader = ","
 set nu!
 set cin!
@@ -147,5 +152,29 @@ au FileType go nmap <leader>t <Plug>(go-test)
 set number
 set relativenumber
 let g:syntastic_go_checkers = ['go']
+let g:syntastic_cpp_checkers = ['gcc']
+let g:syntastic_cpp_clang_exec = '/usr/bin/clang'
 
 nnoremap <silent> <special> <C-\>s     :SyntasticSetLoclist<CR>
+
+set incsearch
+
+let g:go_highlight_array_whitespace_error = 1
+let g:go_highlight_chan_whitespace_error = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_space_tab_error = 1
+let g:go_highlight_trailing_whitespace_error = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_parameters = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_string_spellcheck = 1
+let g:go_highlight_format_strings = 1
+let g:go_highlight_variable_declarations = 1
+let g:go_highlight_variable_assignments = 1
+let g:go_highlight_diagnostic_errors = 1
+let g:go_highlight_diagnostic_warnings = 1
