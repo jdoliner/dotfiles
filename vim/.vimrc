@@ -24,6 +24,7 @@ Plugin 'elmcast/elm-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'habamax/vim-godot'
+Plugin 'github/copilot.vim'
 " Plugin 'davidhalter/jedi-vim'
 " vim-scripts repos
 Bundle 'L9'
