@@ -3,6 +3,7 @@ all:
 	ln zsh/.zshrc ~/.zshrc
 	ln git/.gitconfig ~/.gitconfig
 	ln tmux/.tmux.conf ~/.tmux.conf
+	ln urxvt/.Xresources ~/.Xresources
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 nvim:

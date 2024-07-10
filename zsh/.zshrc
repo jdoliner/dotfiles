@@ -67,6 +67,7 @@ plugins=(sudo)
 plugins=(tmux)
 plugins=(tmuxinator)
 plugins=(torrent)
+plugins=(virtualenv)
 
 # User configuration
 
@@ -111,7 +112,7 @@ function docker_cleanup () {
 alias timeout=gtimeout
 alias sha256sum=gsha256sum
 
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:/home/jdoliner/.local/bin:/snap/bin
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:/home/jdoliner/.local/bin:/snap/bin:/usr/local/lib
 
 export ENT_ACT_CODE=$(cat ~/.creds/dash_key)
 
@@ -136,3 +137,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+alias vim=nvim
+export VIRTUAL_ENV_DISABLE_PROMPT=0
