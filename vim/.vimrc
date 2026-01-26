@@ -32,6 +32,7 @@ Bundle 'FuzzyFinder'
 Bundle 'morhetz/gruvbox'
 " non github repos
 Bundle 'fatih/vim-go'
+Bundle 'ranjithshegde/ccls.nvim'
 " ...
 "
 call vundle#end()            " required

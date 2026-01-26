@@ -112,7 +112,7 @@ function docker_cleanup () {
 alias timeout=gtimeout
 alias sha256sum=gsha256sum
 
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:/home/jdoliner/.local/bin:/snap/bin:/usr/local/lib
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:/home/jdoliner/.local/bin:/snap/bin:/usr/local/lib:/usr/games
 
 export ENT_ACT_CODE=$(cat ~/.creds/dash_key)
 

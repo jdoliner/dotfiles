@@ -4,6 +4,6 @@
 	name = Joe Doliner
 	email = jdoliner@gmail.com
 [core]
-	editor = vim
+	editor = nvim
 [merge]
 	conflictstyle = diff3
