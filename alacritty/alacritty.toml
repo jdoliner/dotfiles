@@ -1,0 +1,9 @@
+[keyboard]
+# Toggle fullscreen with Control + Shift + F
+bindings = [
+   { key = "F11", action = "ToggleFullscreen" },
+]
+
+[font]
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
+size = 11.0

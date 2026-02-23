@@ -5,6 +5,9 @@ all:
 	ln tmux/.tmux.conf ~/.tmux.conf
 	ln urxvt/.Xresources ~/.Xresources
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	ln nvim ~/.config/nvim
+	ln starship/starship.toml ~/.config/starship.toml
+	ln alacritty ~/.config/alacritty
 
 nvim:
 	mkdir -p ~/.config

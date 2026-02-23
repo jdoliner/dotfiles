@@ -1,0 +1,15 @@
+[golang]
+symbol = " "  # The Nerd Font 'Go' glyph (looks like the Gopher)
+style  = "cyan"
+
+[python]
+symbol = " "  # Python Logo
+style  = "green"
+
+[rust]
+symbol = " "  # The Rust Crab
+style  = "red"
+
+[nodejs]
+symbol = " "  # The Node.js logo
+style  = "green"

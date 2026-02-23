@@ -5,7 +5,9 @@ export ZSH=/home/jdoliner/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME=""
+
+eval "$(starship init zsh)"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,25 +51,24 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-plugins=(aws)
-plugins=(boot2docker)
-plugins=(brew)
-plugins=(brew-cask)
-plugins=(colored-man)
-plugins=(colorize)
-plugins=(docker)
-plugins=(docker-compose)
-plugins=(golang)
-plugins=(history)
-plugins=(history-substring-search)
-plugins=(mosh)
-plugins=(ssh-agent)
-plugins=(sudo)
-plugins=(tmux)
-plugins=(tmuxinator)
-plugins=(torrent)
-plugins=(virtualenv)
+plugins=(
+  git
+  aws
+  brew
+  colorize
+  docker
+  docker-compose
+  golang
+  history
+  history-substring-search
+  mosh
+  ssh-agent
+  sudo
+  tmux
+  tmuxinator
+  torrent
+  virtualenv
+)
 
 # User configuration
 
@@ -112,9 +113,11 @@ function docker_cleanup () {
 alias timeout=gtimeout
 alias sha256sum=gsha256sum
 
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:/home/jdoliner/.local/bin:/snap/bin:/usr/local/lib:/usr/games
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:/home/jdoliner/.local/bin:/snap/bin:/usr/local/lib:/usr/games:/home/jdoliner/.cargo/bin
 
 export ENT_ACT_CODE=$(cat ~/.creds/dash_key)
+
+export EDITOR=nvim
 
 # The next line updates PATH for the Google Cloud SDK.
 # source '/Users/jdoliner/Downloads/google-cloud-sdk/path.zsh.inc'
